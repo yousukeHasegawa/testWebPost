@@ -57,6 +57,7 @@ enum WebAPIClient{
             guard let httpResponse = response as? HTTPURLResponse,
                   httpResponse.statusCode == 201 else {
                       result = .failure(.invalidRequest)
+                      print(response!)
                       return
             }
             
